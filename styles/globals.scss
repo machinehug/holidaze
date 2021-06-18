@@ -1,0 +1,165 @@
+@import "variables.scss";
+@import "typography.scss";
+@import "./components/FeedbackMessage.module.scss";
+
+:root {
+  /*no scrollbar in Firefox*/
+  scrollbar-width: none;
+  /*no scrollbar in IE*/
+  -ms-overflow-style: none;
+}
+
+/*no scrollbar in Chrome and Safari*/
+::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+  height: 100%;
+  padding-bottom: 5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+    cursor: pointer;
+
+    a {
+      padding: 0.5rem 1rem;
+    }
+  }
+}
+
+input,
+select,
+button,
+textarea {
+  padding: 1rem 2rem;
+  height: 5rem;
+  border: $border;
+  border-radius: $border-radius;
+}
+
+fieldset {
+  div {
+    margin-bottom: 2rem;
+  }
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+select {
+  margin: 0;
+}
+
+form {
+  margin: 2rem 0;
+}
+
+fieldset,
+button {
+  border: none;
+}
+
+fieldset {
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  background: map-get($colors, turquoise);
+  box-shadow: $shadow;
+  padding: 0;
+}
+
+input {
+  display: flex;
+  width: 100%;
+
+  // icon
+  i {
+    border: $border;
+    color: map-get($colors, black);
+    font-size: 1.3rem;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+select {
+  width: fit-content;
+}
+
+textarea {
+  min-width: 100%;
+  min-height: 15rem;
+  max-width: 10rem;
+}
+
+/*
+.error,
+.success {
+  margin: 2rem 0;
+  padding: 0.65rem 1rem;
+}
+
+.error {
+  background: map-get($colors, pink);
+}
+
+.success {
+  background: map-get($colors, turquoise);
+}
+*/

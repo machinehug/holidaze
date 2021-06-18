@@ -1,0 +1,15 @@
+@import "../variables.scss";
+
+.error,
+.success {
+  margin: 2rem 0;
+  padding: 0.65rem 1rem;
+}
+
+.error {
+  background: map-get($colors, pink);
+}
+
+.success {
+  background: map-get($colors, turquoise);
+}

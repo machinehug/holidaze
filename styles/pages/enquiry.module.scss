@@ -1,0 +1,59 @@
+@import "../variables.scss";
+
+.wrapper {
+  margin: 0 auto;
+  margin-top: 5rem;
+  width: 100%;
+  max-width: 100rem;
+
+  @media only screen and (max-width: map-get($media-widths, large-mobile)) {
+    margin-top: 10rem;
+  }
+
+  img {
+    height: 17rem;
+  }
+}
+
+.top {
+  div {
+    display: flex;
+
+    div {
+      flex-direction: column;
+      margin-left: 1rem;
+    }
+  }
+}
+
+.bottom,
+.submit {
+  border-top: $border;
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.submit {
+  text-align: right;
+  font-family: map-get(map-get($fonts, family), body);
+
+  @media only screen and (max-width: map-get($media-widths, tablet)) {
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  .txt {
+    font-size: map-get(map-get($fonts, size), m);
+    font-family: map-get(map-get($fonts, family), title);
+  }
+
+  button {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 25rem;
+
+    @media only screen and (max-width: map-get($media-widths, large-mobile)) {
+      min-width: 100%;
+    }
+  }
+}

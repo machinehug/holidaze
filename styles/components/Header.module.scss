@@ -1,0 +1,159 @@
+@import "../variables.scss";
+
+.header {
+  border-bottom: $border;
+  padding: 2rem 1rem 1rem 1rem;
+
+  @media only screen and (max-width: map-get($media-widths, large-mobile)) {
+    position: fixed;
+    background: map-get($colors, white);
+    width: 100%;
+    z-index: 99999;
+  }
+
+  .admin {
+    width: 100%;
+    border-top: $border;
+    padding-top: 1rem;
+  }
+
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    max-width: $page-max-width;
+    margin: 0 auto;
+
+    @media only screen and (max-width: map-get($media-widths, large-mobile)) {
+      flex-flow: nowrap;
+    }
+
+    .wrapper {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+
+    .logo {
+      height: auto;
+      width: 10rem;
+    }
+
+    .nav {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          margin: 0 1rem;
+        }
+      }
+    }
+
+    .nav {
+      margin-top: 1rem;
+
+      @media only screen and (max-width: map-get($media-widths, large-mobile)) {
+        display: none !important;
+      }
+    }
+
+    /******* HAMBURGER *******/
+    .hamburger {
+      display: none;
+      cursor: pointer;
+
+      @media only screen and (max-width: map-get($media-widths, large-mobile)) {
+        display: block;
+      }
+
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 5rem;
+        height: 3rem;
+
+        .line {
+          width: 3rem;
+          height: 0.3rem;
+          background: map-get($colors, black);
+          margin: 0.3rem;
+          border-radius: $border-radius;
+        }
+      }
+    }
+  }
+}
+
+/******* MOBILE *******/
+.mobile {
+  background: map-get($colors, lightgrey);
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  right: 0;
+  top: 0;
+  height: 100%;
+  box-shadow: $shadow;
+  animation: nav-mobile-slide-in 1.5s;
+  overflow-y: scroll;
+
+  @media only screen and (min-width: map-get($media-widths, large-mobile)) {
+    display: none !important;
+  }
+
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-top: 8.4rem;
+
+    i {
+      font-size: 2rem;
+    }
+  }
+
+  nav {
+    width: 100%;
+
+    ul {
+      padding-left: 3rem;
+
+      li {
+        margin: 2rem 0;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+@keyframes nav-mobile-slide-in {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.hamburgercloseanimation {
+  transform: rotate(90deg);
+  transition: 1s ease-in-out;
+  position: absolute;
+}
+
+.line1 {
+  transform: rotate(45deg);
+}
+
+.line2 {
+  opacity: 0;
+}
+
+.line3 {
+  transform: rotate(135deg);
+}

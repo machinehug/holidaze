@@ -1,0 +1,140 @@
+@import "../variables.scss";
+
+.wrapper {
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: map-get($media-widths, large-mobile)) {
+    margin-top: 10rem;
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+  }
+
+  .submit {
+    button {
+      width: 20rem;
+      float: right;
+
+      @media only screen and (max-width: map-get($media-widths, mobile)) {
+        width: 100%;
+      }
+    }
+  }
+
+  .btns {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+
+    a,
+    button {
+      width: 100%;
+      margin: 1rem 0;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+
+  h1 {
+    width: 100%;
+  }
+
+  span {
+    font-family: map-get(map-get($fonts, family), body);
+  }
+}
+
+.inner {
+  border: $border;
+  border-radius: $border-radius;
+  padding: 1.5rem 2rem;
+  box-shadow: $shadow;
+  max-width: 80rem;
+  display: flex;
+  flex-direction: column;
+
+  button {
+    width: 100%;
+
+    @media only screen and (max-width: map-get($media-widths, mobile)) {
+      margin: 1rem 0;
+    }
+  }
+
+  .info {
+    margin-bottom: 1rem;
+    border-bottom: $border;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+  }
+
+  .message {
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+    span {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.card {
+  width: 100%;
+  max-width: 42rem;
+  margin: 1.5rem;
+
+  h1 {
+    margin-bottom: 1rem;
+    @media only screen and (max-width: map-get($media-widths, mobile)) {
+      font-size: map-get(map-get($fonts, size), l);
+    }
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    @media only screen and (max-width: map-get($media-widths, mobile)) {
+      font-size: map-get(map-get($fonts, size), m);
+    }
+  }
+}
+
+.edit {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 5rem 0;
+
+  h1 {
+    width: 100%;
+  }
+
+  section {
+    width: 100%;
+    max-width: 60rem;
+
+    button {
+      margin-top: 1rem;
+      margin-right: 2rem;
+    }
+  }
+}
+
+.dangerbtn {
+  background: map-get($colors, red) !important;
+}
+
+.link {
+  text-decoration: underline;
+  cursor: pointer;
+}

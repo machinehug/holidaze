@@ -1,0 +1,45 @@
+@import "../variables.scss";
+
+.footer {
+  background: map-get($colors, lightgrey);
+  padding-top: 7rem;
+
+  .container {
+    nav {
+      padding: 1rem;
+    }
+
+    .top,
+    .bottom {
+      flex-wrap: wrap;
+      margin: 3rem 0 0 0;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-evenly;
+
+      nav {
+        margin-top: 1.5rem;
+      }
+    }
+
+    .bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      div {
+        padding: 1rem 0;
+        width: 10rem;
+        display: flex;
+        justify-content: space-between;
+
+        i {
+          font-size: 2rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

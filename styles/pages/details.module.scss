@@ -1,0 +1,78 @@
+@import "../variables.scss";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  width: 100%;
+
+  @media only screen and (max-width: map-get($media-widths, large-mobile)) {
+    margin-top: 10rem;
+  }
+
+  @media only screen and (max-width: map-get($media-widths, tablet)) {
+    flex-wrap: wrap;
+  }
+
+  .abouttop {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .aboutbottom {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 12rem 0;
+
+    @media only screen and (max-width: map-get($media-widths, tablet)) {
+      flex-direction: column;
+      margin: 0 auto;
+      margin-top: 5rem;
+    }
+
+    div {
+      width: 100%;
+      min-width: 10rem;
+      max-width: 20em;
+      padding: 5rem 0;
+    }
+  }
+
+  .info {
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 30rem;
+
+    @media only screen and (max-width: map-get($media-widths, desktop)) {
+      width: 100%;
+    }
+
+    @media only screen and (max-width: map-get($media-widths, tablet)) {
+      margin-top: 2rem;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 2rem;
+    }
+
+    .price {
+      text-align: right;
+      font-family: map-get(map-get($fonts, family), body);
+      margin-top: 5rem;
+
+      @media only screen and (max-width: map-get($media-widths, tablet)) {
+        width: 100%;
+        margin-top: 3rem;
+      }
+
+      .txt {
+        font-size: map-get(map-get($fonts, size), m);
+        font-family: map-get(map-get($fonts, family), title);
+      }
+    }
+  }
+}

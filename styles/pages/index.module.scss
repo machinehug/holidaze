@@ -1,0 +1,79 @@
+@import "../variables.scss";
+
+.wrapper {
+  width: 100%;
+  max-width: 100rem;
+  margin: 0 auto;
+  margin-top: 15rem;
+  background: map-get($colors, white);
+  padding: 5rem 7rem;
+  border: $border;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+
+  @media only screen and (max-width: map-get($media-widths, large-mobile)) {
+    padding: 3rem 2rem;
+    margin-top: 20rem;
+  }
+
+  h1 {
+    @media only screen and (max-width: map-get($media-widths, mobile)) {
+      font-size: 3rem;
+    }
+  }
+
+  h2 {
+    @media only screen and (max-width: map-get($media-widths, tablet)) {
+      font-size: 2rem;
+    }
+  }
+
+  input {
+    margin: 0;
+  }
+
+  .search {
+    display: flex;
+    margin-top: 2rem;
+    position: relative;
+    width: 100%;
+
+    @media only screen and (max-width: map-get($media-widths, tablet)) {
+      flex-direction: column;
+    }
+
+    .inner {
+      width: 100%;
+    }
+
+    button {
+      width: 20rem;
+      margin-left: 2rem;
+
+      @media only screen and (max-width: map-get($media-widths, tablet)) {
+        width: 100%;
+        margin: 2rem 0 0 0;
+      }
+    }
+  }
+}
+
+.dropdown {
+  position: relative;
+
+  ul {
+    background: map-get($colors, white);
+    border: $border;
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: -10px;
+  }
+}
+
+.bg {
+  background: url("/img/index/bg.jpg") no-repeat center;
+  background-size: cover;
+  height: 100%;
+}

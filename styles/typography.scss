@@ -1,0 +1,106 @@
+@import "variables.scss";
+
+:root {
+  /*makes it easier to calculate: 62.5% = 10px / 1rem*/
+  font-size: 62.5%;
+}
+
+body,
+p {
+  font-size: map-get(map-get($fonts, size), s);
+  font-family: map-get(map-get($fonts, family), body);
+  line-height: 230%;
+}
+
+body,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: map-get($colors, black);
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: map-get(map-get($fonts, family), title);
+}
+
+h1 {
+  font-size: map-get(map-get($fonts, size), xl);
+}
+
+h2 {
+  font-size: map-get(map-get($fonts, size), l);
+}
+
+h3 {
+  font-size: map-get(map-get($fonts, size), m);
+}
+
+p {
+  word-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+ul,
+ol {
+  li {
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+button {
+  font-weight: 600;
+  font-size: map-get(map-get($fonts, size), m);
+  text-transform: uppercase;
+  color: map-get($colors, white);
+
+  a {
+    text-decoration: none;
+    color: map-get($colors, white);
+  }
+}
+
+input,
+select,
+textarea {
+  font-size: map-get(map-get($fonts, size), s);
+  font-family: map-get(map-get($fonts, family), body);
+}
+
+footer {
+  h1 {
+    font-size: map-get(map-get($fonts, size), m);
+  }
+
+  p {
+    font-size: map-get(map-get($fonts, size), xs);
+    font-family: map-get(map-get($fonts, family), body);
+    text-align: center;
+  }
+
+  ul {
+    li {
+      font-family: map-get(map-get($fonts, family), body);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

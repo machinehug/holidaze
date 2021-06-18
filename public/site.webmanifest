@@ -1,0 +1,12 @@
+{
+    "name": "Holidaze",
+    "short_name": "Holidaze",
+    "icons": [{
+        "src": "favicon/icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    }],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}
